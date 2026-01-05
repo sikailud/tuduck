@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://4ptchcpuuu2e"]
 
-[ext_resource type="Script" uid="uid://dv8q8fmsueoiy" path="res://script/police.gd" id="1_obt6p"]
+[ext_resource type="Script" uid="uid://dv8q8fmsueoiy" path="res://scripts/police.gd" id="1_obt6p"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pv3kd"]
 radius = 16.0

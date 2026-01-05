@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://d0aqb0vj5v62"]
 
-[ext_resource type="PackedScene" uid="uid://b7jgf3ep1skrt" path="res://scene/player.tscn" id="1_tojiq"]
-[ext_resource type="PackedScene" uid="uid://4ptchcpuuu2e" path="res://scene/police.tscn" id="2_pdiei"]
+[ext_resource type="PackedScene" uid="uid://b7jgf3ep1skrt" path="res://scenes/player.tscn" id="1_tojiq"]
+[ext_resource type="PackedScene" uid="uid://4ptchcpuuu2e" path="res://scenes/police.tscn" id="2_pdiei"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tojiq"]
 size = Vector2(4832, 104)

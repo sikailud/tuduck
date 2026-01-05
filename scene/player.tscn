@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7jgf3ep1skrt"]
+
+[ext_resource type="Script" uid="uid://dab8w1adi1ngq" path="res://script/player.gd" id="1_xo3ru"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pv3kd"]
+radius = 16.0
+height = 66.0
+
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
+script = ExtResource("1_xo3ru")
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_pv3kd")
+debug_color = Color(0.29187483, 0.6299074, 0, 0.41960785)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
+drag_horizontal_enabled = true
+drag_vertical_enabled = true

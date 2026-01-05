@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://4ptchcpuuu2e"]
+
+[ext_resource type="Script" uid="uid://dv8q8fmsueoiy" path="res://script/police.gd" id="1_obt6p"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pv3kd"]
+radius = 16.0
+height = 66.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_obt6p"]
+radius = 330.01364
+
+[node name="Police" type="CharacterBody2D"]
+collision_layer = 3
+script = ExtResource("1_obt6p")
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_pv3kd")
+debug_color = Color(0.2023077, 0.45856696, 1, 0.41960785)
+
+[node name="View" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="View"]
+shape = SubResource("CircleShape2D_obt6p")
+debug_color = Color(0.59352, 0.50984675, 0.54324025, 0.41960785)
+
+[connection signal="body_entered" from="View" to="." method="_on_view_body_entered"]
+[connection signal="body_exited" from="View" to="." method="_on_view_body_exited"]

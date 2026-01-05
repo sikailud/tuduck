@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://d0aqb0vj5v62"]
+
+[ext_resource type="PackedScene" uid="uid://b7jgf3ep1skrt" path="res://scene/player.tscn" id="1_tojiq"]
+[ext_resource type="PackedScene" uid="uid://4ptchcpuuu2e" path="res://scene/police.tscn" id="2_pdiei"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tojiq"]
+size = Vector2(4832, 104)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pdiei"]
+size = Vector2(64, 274)
+
+[node name="Level0" type="Node2D"]
+
+[node name="Terrain" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain"]
+position = Vector2(986, 1088)
+shape = SubResource("RectangleShape2D_tojiq")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Terrain"]
+position = Vector2(987, 625)
+shape = SubResource("RectangleShape2D_tojiq")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Terrain"]
+position = Vector2(167, 1091)
+shape = SubResource("RectangleShape2D_pdiei")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Terrain"]
+position = Vector2(1871, 983)
+shape = SubResource("RectangleShape2D_pdiei")
+
+[node name="Player" parent="." instance=ExtResource("1_tojiq")]
+position = Vector2(266, 980)
+
+[node name="Police" parent="." instance=ExtResource("2_pdiei")]
+position = Vector2(1063, 878)
